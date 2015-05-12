@@ -1,30 +1,36 @@
 //Maya ASCII 2015 scene
 //Name: bandits_title_overlay.ma
-//Last modified: Thu, Dec 11, 2014 10:39:20 PM
+//Last modified: Tue, May 12, 2015 10:49:00 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "BANDITS_002" -rfn "BANDITS_002RN" -op "v=0;" "assets/texts/titles/BANDITS_002.ma";
+file -rdi 1 -ns "TitleBANDITS_004" -rfn "TitleBANDITS_004RN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/texts/titles/TitleBANDITS_004.ma";
 file -r -ns "BANDITS_002" -dr 1 -rfn "BANDITS_002RN" -op "v=0;" "assets/texts/titles/BANDITS_002.ma";
+file -r -ns "TitleBANDITS_004" -dr 1 -rfn "TitleBANDITS_004RN" -op "v=0;" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/texts/titles/TitleBANDITS_004.ma";
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
 		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
+requires -nodeType "RenderMan" -nodeType "PxrDisney" "RenderMan_for_Maya" "5.5";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
 fileInfo "cutIdentifier" "201410051530-933320";
-fileInfo "osv" "Mac OS X 10.9.1";
+fileInfo "osv" "Mac OS X 10.9.3";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.143214971066268 120.06620673457441 40 ;
-	setAttr ".r" -type "double3" -63.93835272960294 0 -8.135110908408624e-16 ;
+	setAttr ".t" -type "double3" 1.7862381348989664 4.5709614255305784 12.445065427646778 ;
+	setAttr ".r" -type "double3" -7.6630524854347071 -5.3650234867150663 8.1201449343559428e-13 ;
+	setAttr ".rp" -type "double3" 0 -8.8817841970012523e-16 -1.7763568394002505e-15 ;
+	setAttr ".rpt" -type "double3" -6.3292773668751402e-17 -8.5988065239884867e-16 -1.034684371870885e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 121.80137648790641;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 13.204900985457755;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 3.0098773267477639 2.8101259572948289 -0.58457676305507533 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -68,14 +74,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode transform -n "camera1";
-	setAttr ".t" -type "double3" 3.0871271903423558 0.067959328234158844 7 ;
-	setAttr -av ".tx";
-	setAttr -av ".ty";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 0 0 ;
-	setAttr -av ".rx";
-	setAttr -av ".ry";
-	setAttr -av ".rz";
 createNode camera -n "cameraShape1" -p "camera1";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
@@ -109,14 +107,6 @@ createNode rigidBody -n "rigidBody1" -p "pSphere1";
 	setAttr ".igc" 1;
 	setAttr ".sid" 0;
 createNode fosterParent -n "BANDITS_002RNfosterParent1";
-createNode rigidBody -n "rigidBody8" -p "BANDITS_002RNfosterParent1";
-	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 5.9910473823547363 0.46042059057428769 -0.13913051784038544 ;
-	setAttr ".mas" 0;
-	setAttr ".igc" 1;
-	setAttr ".kin" yes;
-	setAttr ".par" yes;
-	setAttr ".sid" 7;
 createNode mesh -n "BANDITS_002:polySurfaceShape7" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -659,14 +649,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape7" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody7" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody8" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 5.0627999305725098 0.46051084719229862 -0.13913051784038544 ;
+	setAttr ".com" -type "double3" 5.9910473823547363 0.46042059057428769 -0.13913051784038544 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 6;
+	setAttr ".sid" 7;
 createNode mesh -n "BANDITS_002:polySurfaceShape6" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -867,14 +857,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape6" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody6" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody7" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 4.3019998073577881 0.46051084719229873 -0.15524949133396149 ;
+	setAttr ".com" -type "double3" 5.0627999305725098 0.46051084719229862 -0.13913051784038544 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 5;
+	setAttr ".sid" 6;
 createNode mesh -n "BANDITS_002:polySurfaceShape5" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1121,14 +1111,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape5" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody5" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody6" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 3.4940857887268066 0.46005172345631051 -0.13913051784038544 ;
+	setAttr ".com" -type "double3" 4.3019998073577881 0.46051084719229873 -0.15524949133396149 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 4;
+	setAttr ".sid" 5;
 createNode mesh -n "BANDITS_002:polySurfaceShape4" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1487,14 +1477,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape4" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody4" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody5" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 2.5164000988006592 0.46051084719229868 -0.13913053274154663 ;
+	setAttr ".com" -type "double3" 3.4940857887268066 0.46005172345631051 -0.13913051784038544 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 3;
+	setAttr ".sid" 4;
 createNode mesh -n "BANDITS_002:polySurfaceShape3" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -1788,14 +1778,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape3" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody3" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody4" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 1.5023999512195587 0.46051084719229862 -0.15524947643280029 ;
+	setAttr ".com" -type "double3" 2.5164000988006592 0.46051084719229868 -0.13913053274154663 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 2;
+	setAttr ".sid" 3;
 createNode mesh -n "BANDITS_002:polySurfaceShape2" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -2051,14 +2041,14 @@ createNode mesh -n "BANDITS_002:polySurfaceShape2" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode rigidBody -n "rigidBody2" -p "BANDITS_002RNfosterParent1";
+createNode rigidBody -n "rigidBody3" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
-	setAttr ".com" -type "double3" 0.49049986526370049 0.46075457462711283 -0.15524949133396149 ;
+	setAttr ".com" -type "double3" 1.5023999512195587 0.46051084719229862 -0.15524947643280029 ;
 	setAttr ".mas" 0;
 	setAttr ".igc" 1;
 	setAttr ".kin" yes;
 	setAttr ".par" yes;
-	setAttr ".sid" 1;
+	setAttr ".sid" 2;
 createNode mesh -n "BANDITS_002:polySurfaceShape1" -p "BANDITS_002RNfosterParent1";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -2576,499 +2566,3553 @@ createNode mesh -n "BANDITS_002:polySurfaceShape1" -p "BANDITS_002RNfosterParent
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 2 ".lnk";
-	setAttr -s 2 ".slnk";
-createNode displayLayerManager -n "layerManager";
-createNode displayLayer -n "defaultLayer";
-createNode renderLayerManager -n "renderLayerManager";
-createNode renderLayer -n "defaultRenderLayer";
-	setAttr ".g" yes;
-createNode reference -n "BANDITS_002RN";
-	setAttr -s 84 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"BANDITS_002RN"
-		"BANDITS_002RN" 0
-		"BANDITS_002RN" 197
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape1" "|BANDITS_002:BANDITS|BANDITS_002:B" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody2" "|BANDITS_002:BANDITS|BANDITS_002:B" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape2" "|BANDITS_002:BANDITS|BANDITS_002:A" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody3" "|BANDITS_002:BANDITS|BANDITS_002:A" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape3" "|BANDITS_002:BANDITS|BANDITS_002:N" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody4" "|BANDITS_002:BANDITS|BANDITS_002:N" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape4" "|BANDITS_002:BANDITS|BANDITS_002:D" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody5" "|BANDITS_002:BANDITS|BANDITS_002:D" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape5" "|BANDITS_002:BANDITS|BANDITS_002:I" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody6" "|BANDITS_002:BANDITS|BANDITS_002:I" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape6" "|BANDITS_002:BANDITS|BANDITS_002:T" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody7" "|BANDITS_002:BANDITS|BANDITS_002:T" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape7" "|BANDITS_002:BANDITS|BANDITS_002:S" 
-		"-s -r "
-		0 "|BANDITS_002RNfosterParent1|rigidBody8" "|BANDITS_002:BANDITS|BANDITS_002:S" 
-		"-s -r "
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvPivot" " -type \"double2\" 0.5 0.5"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet" " -s 7"
-		
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[1].uvSetName" 
-		" -type \"string\" \"map11\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[2].uvSetName" 
-		" -type \"string\" \"map12\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[3].uvSetName" 
-		" -type \"string\" \"map13\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[4].uvSetName" 
-		" -type \"string\" \"map14\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[5].uvSetName" 
-		" -type \"string\" \"map15\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[6].uvSetName" 
-		" -type \"string\" \"map16\""
-		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "pnts[0]" " -type \"float3\" 0 0 0"
-		
-		3 "BANDITS_002:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "BANDITS_002:groupId10.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId9.groupId" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId12.groupId" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId15.groupId" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "BANDITS_002:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "BANDITS_002:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "BANDITS_002:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "BANDITS_002:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId13.groupId" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "BANDITS_002:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId14.groupId" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId11.groupId" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "BANDITS_002:groupId10.groupId" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateX" 
-		"BANDITS_002RN.placeHolderList[1]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateY" 
-		"BANDITS_002RN.placeHolderList[2]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateZ" 
-		"BANDITS_002RN.placeHolderList[3]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateX" "BANDITS_002RN.placeHolderList[4]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateY" "BANDITS_002RN.placeHolderList[5]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateZ" "BANDITS_002RN.placeHolderList[6]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[7]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[8]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[9]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[10]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[11]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.message" 
-		"BANDITS_002RN.placeHolderList[12]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateX" 
-		"BANDITS_002RN.placeHolderList[13]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateY" 
-		"BANDITS_002RN.placeHolderList[14]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateZ" 
-		"BANDITS_002RN.placeHolderList[15]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateX" "BANDITS_002RN.placeHolderList[16]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateY" "BANDITS_002RN.placeHolderList[17]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateZ" "BANDITS_002RN.placeHolderList[18]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[19]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[20]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[21]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[22]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[23]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.message" 
-		"BANDITS_002RN.placeHolderList[24]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateX" 
-		"BANDITS_002RN.placeHolderList[25]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateY" 
-		"BANDITS_002RN.placeHolderList[26]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateZ" 
-		"BANDITS_002RN.placeHolderList[27]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateX" "BANDITS_002RN.placeHolderList[28]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateY" "BANDITS_002RN.placeHolderList[29]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateZ" "BANDITS_002RN.placeHolderList[30]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[31]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[32]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[33]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[34]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[35]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.message" 
-		"BANDITS_002RN.placeHolderList[36]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateX" 
-		"BANDITS_002RN.placeHolderList[37]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateY" 
-		"BANDITS_002RN.placeHolderList[38]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateZ" 
-		"BANDITS_002RN.placeHolderList[39]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateX" "BANDITS_002RN.placeHolderList[40]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateY" "BANDITS_002RN.placeHolderList[41]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateZ" "BANDITS_002RN.placeHolderList[42]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[43]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[44]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[45]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[46]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[47]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.message" 
-		"BANDITS_002RN.placeHolderList[48]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateX" 
-		"BANDITS_002RN.placeHolderList[49]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateY" 
-		"BANDITS_002RN.placeHolderList[50]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateZ" 
-		"BANDITS_002RN.placeHolderList[51]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateX" "BANDITS_002RN.placeHolderList[52]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateY" "BANDITS_002RN.placeHolderList[53]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateZ" "BANDITS_002RN.placeHolderList[54]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[55]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[56]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[57]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[58]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[59]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.message" 
-		"BANDITS_002RN.placeHolderList[60]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateX" 
-		"BANDITS_002RN.placeHolderList[61]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateY" 
-		"BANDITS_002RN.placeHolderList[62]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateZ" 
-		"BANDITS_002RN.placeHolderList[63]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateX" "BANDITS_002RN.placeHolderList[64]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateY" "BANDITS_002RN.placeHolderList[65]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateZ" "BANDITS_002RN.placeHolderList[66]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[67]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[68]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[69]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[70]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[71]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.message" 
-		"BANDITS_002RN.placeHolderList[72]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateX" 
-		"BANDITS_002RN.placeHolderList[73]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateY" 
-		"BANDITS_002RN.placeHolderList[74]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateZ" 
-		"BANDITS_002RN.placeHolderList[75]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateX" "BANDITS_002RN.placeHolderList[76]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateY" "BANDITS_002RN.placeHolderList[77]" 
-		""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateZ" "BANDITS_002RN.placeHolderList[78]" 
-		""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.worldMatrix" 
-		"BANDITS_002RN.placeHolderList[79]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0]" 
-		"BANDITS_002RN.placeHolderList[80]" ":initialShadingGroup.dsm"
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"BANDITS_002RN.placeHolderList[81]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"BANDITS_002RN.placeHolderList[82]" ""
-		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.inMesh" 
-		"BANDITS_002RN.placeHolderList[83]" ""
-		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.message" 
-		"BANDITS_002RN.placeHolderList[84]" "";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
+createNode rigidBody -n "rigidBody2" -p "BANDITS_002RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".com" -type "double3" 0.49049986526370049 0.46075457462711283 -0.15524949133396149 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 1;
+createNode fosterParent -n "TitleBANDITS_004RNfosterParent1";
+createNode rigidBody -n "rigidBody15" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 5.9910473823547363 0.46042059057428769 -0.13913051784038544 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 14;
+createNode rigidBody -n "rigidBody14" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 5.0627999305725098 0.46051084719229862 -0.13913051784038544 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 13;
+createNode rigidBody -n "rigidBody13" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 4.3019998073577881 0.46051084719229873 -0.15524949133396149 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 12;
+createNode rigidBody -n "rigidBody12" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 3.4940857887268066 0.46005172345631051 -0.13913051784038544 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 11;
+createNode rigidBody -n "rigidBody11" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 2.5164000988006592 0.46051084995269775 -0.13913053274154663 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 10;
+createNode rigidBody -n "rigidBody10" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 1.5023999512195587 0.4605108499526977 -0.15524947643280029 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 9;
+createNode rigidBody -n "rigidBody9" -p "TitleBANDITS_004RNfosterParent1";
+	setAttr -k off ".v";
+	setAttr ".ip" -type "double3" 0 5 0 ;
+	setAttr ".com" -type "double3" 0.49049986526370049 0.46075455672689714 -0.15524949133396149 ;
+	setAttr ".mas" 0;
+	setAttr ".igc" 1;
+	setAttr ".kin" yes;
+	setAttr ".par" yes;
+	setAttr ".sid" 8;
+createNode RenderMan -s -n "renderManRISGlobals";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupJob" -ln "rman__toropt___renderDataCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___shaderCleanupJob" -ln "rman__toropt___shaderCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupJob" -ln "rman__toropt___textureCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupJob" -ln "rman__toropt___ribCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribFlatten" -ln "rman__toropt___ribFlatten" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupFrame" -ln "rman__toropt___renderDataCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupFrame" -ln "rman__toropt___textureCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupFrame" -ln "rman__toropt___ribCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___primaryCamera" -ln "rman__toropt___primaryCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRenderLayers" -ln "rman__toropt___enableRenderLayers" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___renderLayer" -ln "rman__toropt___renderLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___motionBlurType" -ln "rman__toropt___motionBlurType" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___shutterAngle" -ln "rman__toropt___shutterAngle" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__toropt___shutterTiming" -ln "rman__toropt___shutterTiming" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___cacheCrew" -ln "rman__toropt___cacheCrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renumber" -ln "rman__toropt___renumber" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberStart" -ln "rman__toropt___renumberStart" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberBy" -ln "rman__toropt___renumberBy" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRibGen" -ln "rman__toropt___lazyRibGen" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRender" -ln "rman__toropt___lazyRender" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___bakeMode" -ln "rman__toropt___bakeMode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___furChunkSize" -ln "rman__toropt___furChunkSize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableRifs" -ln "rman__torattr___enableRifs" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___nativeShadingSupport" -ln "rman__toropt___nativeShadingSupport" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionSamples" -ln "rman__torattr___motionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___referenceFrame" -ln "rman__torattr___referenceFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution" -ln "rman__torattr___mapResolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution0" -ln "rman__torattr___mapResolution0" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution1" -ln "rman__torattr___mapResolution1" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___cameraBlur" -ln "rman__torattr___cameraBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___frontPlane" -ln "rman__torattr___frontPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___backPlane" -ln "rman__torattr___backPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___crop" -ln "rman__torattr___crop" -dv 
+		-1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passExtFormat" -ln "rman__torattr___passExtFormat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultDisplacementShader" -ln "rman__torattr___defaultDisplacementShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultAtmosphereShader" -ln "rman__torattr___defaultAtmosphereShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultInteriorShader" -ln "rman__torattr___defaultInteriorShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___preFrameScript" -ln "rman__toropt___preFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___postFrameScript" -ln "rman__toropt___postFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preRenderScript" -ln "rman__torattr___preRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postRenderScript" -ln "rman__torattr___postRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiOptionsScript" -ln "rman__torattr___defaultRiOptionsScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiAttributesScript" -ln "rman__torattr___defaultRiAttributesScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___renderBeginScript" -ln "rman__torattr___renderBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformBeginScript" -ln "rman__torattr___transformBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformEndScript" -ln "rman__torattr___transformEndScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postTransformScript" -ln "rman__torattr___postTransformScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preShapeScript" -ln "rman__torattr___preShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postShapeScript" -ln "rman__torattr___postShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cacheShapeScript" -ln "rman__torattr___cacheShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeCrew" -ln "rman__torattr___bakeCrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeOutputFile" -ln "rman__torattr___bakeOutputFile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___customShadingGroup" -ln "rman__torattr___customShadingGroup" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___shaderBindingStrength" -ln "rman__torattr___shaderBindingStrength" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableObjectInstancing" -ln "rman__torattr___enableObjectInstancing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___impliedSSBakeMode" -ln "rman__torattr___impliedSSBakeMode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___JOBSTYLE" -ln "rman__toropt___JOBSTYLE" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___deformationBlurStyle" -ln "rman__torattr___deformationBlurStyle" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___deformationBlurScale" -ln "rman__torattr___deformationBlurScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__torattr___enableMfcProcPrim" -ln "rman__torattr___enableMfcProcPrim" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___linearizeColors" -ln "rman__torattr___linearizeColors" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___referenceCamera" -ln "rman__torattr___referenceCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRIS" -ln "rman__toropt___enableRIS" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_gridsize" -ln "rman__riopt__limits_gridsize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_decimationrate" -ln "rman__riopt__trace_decimationrate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_threads" -ln "rman__riopt__limits_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening" -ln "rman__riopt__Camera_shutteropening" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening0" -ln "rman__riopt__Camera_shutteropening0" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening1" -ln "rman__riopt__Camera_shutteropening1" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__rib_compression" -ln "rman__riopt__rib_compression" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_format" -ln "rman__riopt__rib_format" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_precision" -ln "rman__riopt__rib_precision" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__statistics_level" -ln "rman__riopt__statistics_level" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_filename" -ln "rman__riopt__statistics_filename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_xmlfilename" -ln "rman__riopt__statistics_xmlfilename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection_name" -ln "rman__riopt__Projection_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection2_name" -ln "rman__riopt__Projection2_name" 
+		-dt "string";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_texturememory" -ln "rman__riopt__limits_texturememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_geocachememory" -ln "rman__riopt__limits_geocachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_proceduralmemory" -ln "rman__riopt__limits_proceduralmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowtiles" -ln "rman__riopt__limits_deepshadowtiles" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowmemory" -ln "rman__riopt__limits_deepshadowmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_radiositycachememory" -ln "rman__riopt__limits_radiositycachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_brickmemory" -ln "rman__riopt__limits_brickmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightinglocalizedsampling" 
+		-ln "rman__riopt__shading_directlightinglocalizedsampling" -dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_samplemotion" -ln "rman__riattr__trace_samplemotion" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__dice_referencecamera" -ln "rman__riattr__dice_referencecamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_autobias" -ln "rman__riattr__trace_autobias" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_bias" -ln "rman__riattr__trace_bias" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__displacementbound_coordinatesystem" 
+		-ln "rman__riattr__displacementbound_coordinatesystem" -dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__displacementbound_sphere" -ln "rman__riattr__displacementbound_sphere" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_fov" -ln "rman__riopt__Projection_fov" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_hsweep" -ln "rman__riopt__Projection_hsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_vsweep" -ln "rman__riopt__Projection_vsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_minor" -ln "rman__riopt__Projection_minor" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection2_angle" -ln "rman__riopt__Projection2_angle" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_adaptall" -ln "rman__riopt__Hider_adaptall" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_incremental" -ln "rman__riopt__Hider_incremental" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__EnvLight" -ln "rman__EnvLight" -dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:job";
+	setAttr ".rman__torattr___class" -type "string" "RISJob";
+	setAttr ".rman__torattr___task" -type "string" "job";
+	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
+	setAttr -k on ".rman__toropt___shaderCleanupJob" 0;
+	setAttr -k on ".rman__toropt___textureCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribFlatten" 0;
+	setAttr -k on ".rman__toropt___renderDataCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___textureCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___ribCleanupFrame" 0;
+	setAttr ".rman__toropt___primaryCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRenderLayers" 0;
+	setAttr ".rman__toropt___renderLayer" -type "string" "";
+	setAttr ".rman__toropt___motionBlurType" -type "string" "frame";
+	setAttr -k on ".rman__toropt___shutterAngle" 80;
+	setAttr ".rman__toropt___shutterTiming" -type "string" "frameOpen";
+	setAttr ".rman__toropt___cacheCrew" -type "string" "";
+	setAttr -k on ".rman__toropt___renumber" 0;
+	setAttr -k on ".rman__toropt___renumberStart" 1;
+	setAttr -k on ".rman__toropt___renumberBy" 1;
+	setAttr -k on ".rman__toropt___lazyRibGen" 0;
+	setAttr -k on ".rman__toropt___lazyRender" 0;
+	setAttr -k on ".rman__toropt___bakeMode" 0;
+	setAttr -k on ".rman__toropt___furChunkSize" 10000;
+	setAttr -k on ".rman__torattr___enableRifs" 1;
+	setAttr -k on ".rman__toropt___nativeShadingSupport" 0;
+	setAttr -k on ".rman__torattr___motionSamples" 2;
+	setAttr -k on ".rman__torattr___referenceFrame" 0;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___mapResolution" -type "long2" 0 0 ;
+	setAttr -k on ".rman__torattr___depthOfField" 0;
+	setAttr -k on ".rman__torattr___cameraBlur" 0;
+	setAttr -k on ".rman__torattr___frontPlane" 0;
+	setAttr -k on ".rman__torattr___backPlane" 0;
+	setAttr ".rman__torattr___passCommand" -type "string" "";
+	setAttr -k on ".rman__torattr___crop" 0;
+	setAttr ".rman__torattr___passExtFormat" -type "string" "";
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__torattr___previewPass" 0;
+	setAttr ".rman__torattr___defaultDisplacementShader" -type "string" "";
+	setAttr ".rman__torattr___defaultAtmosphereShader" -type "string" "";
+	setAttr ".rman__torattr___defaultInteriorShader" -type "string" "";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 1;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 1;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 1;
+	setAttr ".rman__toropt___preFrameScript" -type "string" "";
+	setAttr ".rman__toropt___postFrameScript" -type "string" "";
+	setAttr ".rman__torattr___preRenderScript" -type "string" "";
+	setAttr ".rman__torattr___postRenderScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiOptionsScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiAttributesScript" -type "string" "";
+	setAttr ".rman__torattr___renderBeginScript" -type "string" "rmanTimeStampScript";
+	setAttr ".rman__torattr___transformBeginScript" -type "string" "";
+	setAttr ".rman__torattr___transformEndScript" -type "string" "";
+	setAttr ".rman__torattr___postTransformScript" -type "string" "";
+	setAttr ".rman__torattr___preShapeScript" -type "string" "";
+	setAttr ".rman__torattr___postShapeScript" -type "string" "";
+	setAttr ".rman__torattr___cacheShapeScript" -type "string" "";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "";
+	setAttr ".rman__torattr___bakeCrew" -type "string" "";
+	setAttr ".rman__torattr___bakeOutputFile" -type "string" "";
+	setAttr ".rman__torattr___customShadingGroup" -type "string" "";
+	setAttr -k on ".rman__torattr___shaderBindingStrength" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___enableObjectInstancing" 1;
+	setAttr ".rman__torattr___impliedSSBakeMode" -type "string" "SSDiffuse";
+	setAttr ".rman__toropt___JOBSTYLE" -type "string" "";
+	setAttr ".rman__torattr___deformationBlurStyle" -type "string" "none";
+	setAttr -k on ".rman__torattr___deformationBlurScale" 1;
+	setAttr -k on ".rman__torattr___enableMfcProcPrim" 0;
+	setAttr -k on ".rman__torattr___linearizeColors" 1;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr ".rman__torattr___referenceCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRIS" 1;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "PxrDiffuse";
+	setAttr -k on ".rman__riopt__trace_maxdepth" 10;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.004999999888241291;
+	setAttr ".rman__riopt__bucket_order" -type "string" "horizontal";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt__limits_gridsize" 256;
+	setAttr -k on ".rman__riopt__trace_decimationrate" 1;
+	setAttr -k on ".rman__riopt__limits_threads" 0;
+	setAttr -k on ".rman__riopt__Camera_shutteropening" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 1920 1080 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt__hair_minwidth" 0.5;
+	setAttr ".rman__riopt__rib_compression" -type "string" "none";
+	setAttr ".rman__riopt__rib_format" -type "string" "ascii";
+	setAttr ".rman__riopt__rib_precision" -type "string" "6";
+	setAttr -k on ".rman__riopt__statistics_level" 1;
+	setAttr ".rman__riopt__statistics_filename" -type "string" "stdout";
+	setAttr ".rman__riopt__statistics_xmlfilename" -type "string" "[AssetRef -cls rmanstat]";
+	setAttr ".rman__riopt__Projection_name" -type "string" "";
+	setAttr ".rman__riopt__Projection2_name" -type "string" "";
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_texturememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_geocachememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_proceduralmemory" 0;
+	setAttr -k on ".rman__riopt__limits_deepshadowtiles" 1000;
+	setAttr -k on ".rman__riopt__limits_deepshadowmemory" 102400;
+	setAttr -k on ".rman__riopt__limits_radiositycachememory" 102400;
+	setAttr -k on ".rman__riopt__limits_brickmemory" 10240;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 512;
+	setAttr -k on ".rman__riopt__shading_directlightinglocalizedsampling" 0;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_samplemotion" 1;
+	setAttr ".rman__riattr__dice_referencecamera" -type "string" "worldcamera";
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riattr__trace_autobias" 1;
+	setAttr -k on ".rman__riattr__trace_bias" 0.0010000000474974513;
+	setAttr ".rman__riattr__displacementbound_coordinatesystem" -type "string" "shader";
+	setAttr -k on ".rman__riattr__displacementbound_sphere" 0;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riopt__Projection_fov" 90;
+	setAttr -k on ".rman__riopt__Projection_hsweep" 360;
+	setAttr -k on ".rman__riopt__Projection_vsweep" 180;
+	setAttr -k on ".rman__riopt__Projection_minor" 0.25;
+	setAttr -k on ".rman__riopt__Projection2_angle" 90;
+	setAttr -k on ".rman__riopt__Hider_adaptall" 0;
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Hider_incremental" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr ".rman__EnvLight" -type "string" "";
+	setAttr -s 19 ".p";
+createNode RenderMan -s -n "rmanFinalGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanPreviewGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Preview";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 4;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 4;
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 50;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanPreviewOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Rerender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 4;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 2 2 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 4;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+createNode RenderMan -s -n "rmanRerenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanReyesRerenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__render_rerenderbake" -ln "rman__riopt__render_rerenderbake" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__render_rerenderbakedbdir" -ln "rman__riopt__render_rerenderbakedbdir" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "ReyesRerender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 50;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__render_rerenderbake" 1;
+	setAttr ".rman__riopt__render_rerenderbakedbdir" -type "string" "";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+createNode RenderMan -s -n "rmanReyesRerenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__shading_directlightingsamples" -ln "rman__riopt__shading_directlightingsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -h true -sn "rman__riopt__photon_lifetime" -ln "rman__riopt__photon_lifetime" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__photon_emit" -ln "rman__riopt__photon_emit" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__photon_causticmap" -ln "rman__riattr__photon_causticmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riattr__photon_globalmap" -ln "rman__riattr__photon_globalmap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_integrationmode" -ln "rman__riopt__Hider_integrationmode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_samplemode" -ln "rman__riopt__Hider_samplemode" 
+		-dt "string";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___previewPass" 1;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__riopt__shading_directlightingsamples" 4;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 16;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".rman__riopt__photon_lifetime" -type "string" "transient";
+	setAttr -k on ".rman__riopt__photon_emit" 0;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 2;
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr ".rman__riattr__photon_causticmap" -type "string" "";
+	setAttr ".rman__riattr__photon_globalmap" -type "string" "";
+	setAttr ".rman__riopt__Hider_integrationmode" -type "string" "path";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 8;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr ".rman__riopt__Hider_samplemode" -type "string" "";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+createNode RenderMan -s -n "rmanDeepShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowsimplifyerror" -ln "rman__riopt__limits_deepshadowsimplifyerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -s 2 ".d";
+createNode RenderMan -s -n "rmanDeepShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Null";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "null";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanDeepShadowOutputGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_volumeinterpretation" -ln "rman__riopt__Display_volumeinterpretation" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DeepShadow";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___primaryDisplay" 0;
+	setAttr ".rman__riopt__Display_name" -type "string" "+[passinfo this filename -channel $DSPYCHAN]";
+	setAttr ".rman__riopt__Display_type" -type "string" "deepshad";
+	setAttr ".rman__riopt__Display_filter" -type "string" "box";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
+	setAttr ".rman__riopt__Display_mode" -type "string" "deepopacity";
+	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+createNode RenderMan -s -n "rmanAreaShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowsimplifyerror" -ln "rman__riopt__limits_deepshadowsimplifyerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 3 3 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__limits_deepshadowsimplifyerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -s 2 ".d";
+createNode RenderMan -s -n "rmanAreaShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Null";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "null";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanAreaShadowOutputGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowerror" -ln "rman__riopt__limits_deepshadowerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_sigma" -ln "rman__riopt__Hider_sigma" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_volumeinterpretation" -ln "rman__riopt__Display_volumeinterpretation" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "AreaShadow";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___primaryDisplay" 0;
+	setAttr ".rman__riopt__Display_name" -type "string" "+[passinfo this filename -channel $DSPYCHAN]";
+	setAttr ".rman__riopt__Display_type" -type "string" "deepshad";
+	setAttr ".rman__riopt__Display_filter" -type "string" "box";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 9 9 9 ;
+	setAttr -k on ".rman__riopt__limits_deepshadowerror" 0.0099999997764825821;
+	setAttr -k on ".rman__riopt__hair_minwidth" 1;
+	setAttr ".rman__riopt__Display_mode" -type "string" "areashadow";
+	setAttr -k on ".rman__riopt__Hider_sigma" 0;
+	setAttr ".rman__riopt__Display_volumeinterpretation" -type "string" "discrete";
+createNode RenderMan -s -n "rmanShadowGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples" -ln "rman__riopt___VolumePixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples0" -ln "rman__riopt___VolumePixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___VolumePixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___VolumePixelSamples1" -ln "rman__riopt___VolumePixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___VolumePixelSamples";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_jitter" -ln "rman__riopt__Hider_jitter" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_depthfilter" -ln "rman__riopt__Hider_depthfilter" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Shadow";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Shadow";
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 0;
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "null";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 0;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 0;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 0;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 0;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 512 512 ;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "";
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt___VolumePixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.5 0.5 0.5 ;
+	setAttr ".rman__riopt__Hider_name" -type "string" "hidden";
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -k on ".rman__riopt__Hider_jitter" 0;
+	setAttr ".rman__riopt__Hider_depthfilter" -type "string" "midpoint";
+createNode RenderMan -s -n "rmanShadowOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "ShadowZ";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "shadow";
+	setAttr ".rman__riopt__Display_mode" -type "string" "z";
+createNode RenderMan -s -n "rmanBakeGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_dspy" -ln "rman__param__ptrender_dspy" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_depth" -ln "rman__param__ptrender_depth" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size" -ln "rman__param__ptrender_size" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__param__ptrender_size0" -ln "rman__param__ptrender_size0" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size1" -ln "rman__param__ptrender_size1" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -h true -sn "rman__param__ptrender___inputfile" -ln "rman__param__ptrender___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___channel" -ln "rman__param__ptrender___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Bake";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptrender\"];[mel rmanBakeAssignNewShadingNetworks]";
+	setAttr ".rman__param__ptrender_dspy" -type "string" "tiff";
+	setAttr ".rman__param__ptrender_depth" -type "string" "short";
+	setAttr -k on ".rman__param__ptrender_size" -type "long2" 512 512 ;
+	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanBakeRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "BakeRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "Ci,";
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -s 32 ".c";
+createNode RenderMan -s -n "rmanBakeRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Rim";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Rim";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularEnvironment";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularEnvironment";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Translucence";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Translucence";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Z";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Z";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals5";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Diffuse";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Diffuse";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals6";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseEnvironment";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseEnvironment";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals7";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals8";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantize" -ln "rman__riopt__DisplayChannel_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX" -ln "rman__riopt__DisplayChannel_quantizeX" 
+		-at "long2" -p "rman__riopt__DisplayChannel_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX0" -ln "rman__riopt__DisplayChannel_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeX1" -ln "rman__riopt__DisplayChannel_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY" -ln "rman__riopt__DisplayChannel_quantizeY" 
+		-at "long2" -p "rman__riopt__DisplayChannel_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY0" -ln "rman__riopt__DisplayChannel_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_quantizeY1" -ln "rman__riopt__DisplayChannel_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__DisplayChannel_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "id";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float id";
+	setAttr -k on ".rman__riopt__DisplayChannel_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__DisplayChannel_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals9";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Ci";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ci";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals10";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "wP";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "point wP";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals11";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularDirectShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirectShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals12";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals13";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Occlusion";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float Occlusion";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals14";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals15";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "N";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal N";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals16";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Incandescence";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Incandescence";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals17";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals18";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals19";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Oi";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Oi";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals20";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "OcclusionDirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionDirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals21";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "GlowColor";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color GlowColor";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals22";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseDirectShadow";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseDirectShadow";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals23";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Subsurface";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Subsurface";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals24";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Specular";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Specular";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals25";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Refraction";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Refraction";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals26";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "DiffuseIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color DiffuseIndirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals27";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Backscattering";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Backscattering";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals28";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SpecularIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color SpecularIndirect";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals29";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Ambient";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color Ambient";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals30";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "wN";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "normal wN";
+createNode RenderMan -s -n "rmanBakeRenderChannelGlobals31";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "OcclusionIndirect";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color OcclusionIndirect";
+createNode RenderMan -s -n "rmanSSMakeBrickmapGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__brickmake_maxerror" -ln "rman__param__brickmake_maxerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__brickmake_progress" -ln "rman__param__brickmake_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__param__brickmake_omitgeometry" -ln "rman__param__brickmake_omitgeometry" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__brickmake___inputfile" -ln "rman__param__brickmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__brickmake___outputfile" -ln "rman__param__brickmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSMakeBrickmap";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/brickmake\"]";
+	setAttr -k on ".rman__param__brickmake_maxerror" 0.0020000000949949026;
+	setAttr -k on ".rman__param__brickmake_progress" 2;
+	setAttr -k on ".rman__param__brickmake_omitgeometry" 1;
+	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSSDiffuseGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_albedo" -ln "rman__param__ptfilter_albedo" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_diffusemeanfreepath" -ln "rman__param__ptfilter_diffusemeanfreepath" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_smooth" -ln "rman__param__ptfilter_smooth" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_ior" -ln "rman__param__ptfilter_ior" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_maxsolidangle" -ln "rman__param__ptfilter_maxsolidangle" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_unitlength" -ln "rman__param__ptfilter_unitlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_followtopology" -ln "rman__param__ptfilter_followtopology" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSDiffuse";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "ssdiffusion";
+	setAttr ".rman__param__ptfilter_albedo" -type "string" "fromfile";
+	setAttr ".rman__param__ptfilter_diffusemeanfreepath" -type "string" "fromfile";
+	setAttr -k on ".rman__param__ptfilter_smooth" 1;
+	setAttr -k on ".rman__param__ptfilter_ior" 1.2999999523162842;
+	setAttr -k on ".rman__param__ptfilter_maxsolidangle" 1;
+	setAttr -k on ".rman__param__ptfilter_unitlength" 1;
+	setAttr -k on ".rman__param__ptfilter_followtopology" 1;
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSSRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 5;
+	setAttr -s 4 ".c";
+createNode RenderMan -s -n "rmanSSRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "area";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "albedo";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "radiance_t";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSSOrganizeGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_partial" -ln "rman__param__ptfilter_partial" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SSOrganize";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/Subsurface";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "ssdiffusion";
+	setAttr -k on ".rman__param__ptfilter_partial" 1;
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBMakeBrickmapGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__brickmake_maxerror" -ln "rman__param__brickmake_maxerror" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__param__brickmake_progress" -ln "rman__param__brickmake_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__brickmake___inputfile" -ln "rman__param__brickmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__brickmake___outputfile" -ln "rman__param__brickmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakeBrickmap";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/brickmake\"]";
+	setAttr -k on ".rman__param__brickmake_maxerror" 0.0040000001899898052;
+	setAttr -k on ".rman__param__brickmake_progress" 2;
+	setAttr ".rman__param__brickmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__brickmake___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_shading_normalmode" -ln "rman__riopt__user_shading_normalmode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples" -ln "rman__riopt___PixelSamples" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples0" -ln "rman__riopt___PixelSamples0" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riopt___PixelSamples1" -ln "rman__riopt___PixelSamples1" 
+		-dv -1 -at "float" -p "rman__riopt___PixelSamples";
+	addAttr -ci true -k true -sn "rman__riattr__cull_backfacing" -ln "rman__riattr__cull_backfacing" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__cull_hidden" -ln "rman__riattr__cull_hidden" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_rasterorient" -ln "rman__riattr__dice_rasterorient" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr___ShadingRate" -ln "rman__riattr___ShadingRate" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:render";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBRender";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__riopt__user_shading_normalmode" 1;
+	setAttr -k on ".rman__riopt___PixelSamples" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riattr__cull_backfacing" 0;
+	setAttr -k on ".rman__riattr__cull_hidden" 0;
+	setAttr -k on ".rman__riattr__dice_rasterorient" 0;
+	setAttr -k on ".rman__riattr___ShadingRate" 1;
+	setAttr -s 6 ".c";
+createNode RenderMan -s -n "rmanSBRenderOutputGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:display";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PreviewNull";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr ".rman__riopt__Display_name" -type "string" "_preview";
+	setAttr ".rman__riopt__Display_type" -type "string" "null";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals0";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "color";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _color";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals1";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "diffusemeanfreepath";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _diffusemeanfreepath";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals2";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "area";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _area";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals3";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "float";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "float _float";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals4";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "albedo";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _albedo";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBRenderChannelGlobals5";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__DisplayChannel_name" -ln "rman__riopt__DisplayChannel_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__DisplayChannel_EliminateDuplicateGrids" 
+		-ln "rman__riopt__DisplayChannel_EliminateDuplicateGrids" -dv -1 -at "long";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "settings:displaychannel";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "radiance_t";
+	setAttr ".rman__torattr___task" -type "string" "displaychannel";
+	setAttr ".rman__riopt__DisplayChannel_name" -type "string" "color _radiance_t";
+	setAttr -k on ".rman__riopt__DisplayChannel_EliminateDuplicateGrids" 1;
+createNode RenderMan -s -n "rmanSBMakePtCloudGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_filter" -ln "rman__param__ptfilter_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_progress" -ln "rman__param__ptfilter_progress" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter_Progress" -ln "rman__param__ptfilter_Progress" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptfilter_threads" -ln "rman__param__ptfilter_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___inputfile" -ln "rman__param__ptfilter___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptfilter___outputfile" -ln "rman__param__ptfilter___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakePtCloud";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptfilter\"]";
+	setAttr ".rman__param__ptfilter_filter" -type "string" "none";
+	setAttr -k on ".rman__param__ptfilter_progress" 2;
+	setAttr ".rman__param__ptfilter_Progress" -type "string" "_on";
+	setAttr -k on ".rman__param__ptfilter_threads" 0;
+	setAttr ".rman__param__ptfilter___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptfilter___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBPtRenderGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_dspy" -ln "rman__param__ptrender_dspy" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender_depth" -ln "rman__param__ptrender_depth" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size" -ln "rman__param__ptrender_size" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__param__ptrender_size0" -ln "rman__param__ptrender_size0" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -k true -sn "rman__param__ptrender_size1" -ln "rman__param__ptrender_size1" 
+		-dv -1 -at "long" -p "rman__param__ptrender_size";
+	addAttr -ci true -h true -sn "rman__param__ptrender___inputfile" -ln "rman__param__ptrender___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___channel" -ln "rman__param__ptrender___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptrender___outputfile" -ln "rman__param__ptrender___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBPtRender";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptrender\"]";
+	setAttr ".rman__param__ptrender_dspy" -type "string" "texture";
+	setAttr ".rman__param__ptrender_depth" -type "string" "float";
+	setAttr -k on ".rman__param__ptrender_size" -type "long2" 512 512 ;
+	setAttr ".rman__param__ptrender___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptrender___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptrender___outputfile" -type "string" "[passinfo this filename]";
+createNode RenderMan -s -n "rmanSBMakePtexGlobals";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_depth" -ln "rman__param__ptxmake_depth" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_splat" -ln "rman__param__ptxmake_splat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake_geom" -ln "rman__param__ptxmake_geom" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___inputfile" -ln "rman__param__ptxmake___inputfile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___channel" -ln "rman__param__ptxmake___channel" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__param__ptxmake___outputfile" -ln "rman__param__ptxmake___outputfile" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	setAttr ".nt" -type "string" "pass:command";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "SBMakePtex";
+	setAttr ".rman__torattr___task" -type "string" "command";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Maps/SlimBake";
+	setAttr ".rman__torattr___passCommand" -type "string" "[GetCmdPassCmdList \"\\${RMANTREE}/bin/ptxmake\"]";
+	setAttr ".rman__param__ptxmake_depth" -type "string" "half";
+	setAttr ".rman__param__ptxmake_splat" -type "string" "diffusion";
+	setAttr ".rman__param__ptxmake_geom" -type "string" "quad";
+	setAttr ".rman__param__ptxmake___inputfile" -type "string" "[passinfo this/0 filename]";
+	setAttr ".rman__param__ptxmake___channel" -type "string" "$BAKECHAN";
+	setAttr ".rman__param__ptxmake___outputfile" -type "string" "[passinfo this filename]";
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -3223,68 +6267,522 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].value" -type "string" "1.0 1.0 1.0";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
+createNode lightLinker -s -n "lightLinker1";
+	setAttr -s 8 ".lnk";
+	setAttr -s 8 ".slnk";
+createNode displayLayerManager -n "layerManager";
+createNode displayLayer -n "defaultLayer";
+createNode renderLayerManager -n "renderLayerManager";
+createNode renderLayer -n "defaultRenderLayer";
+	setAttr ".g" yes;
+createNode reference -n "BANDITS_002RN";
+	setAttr ".fn[0]" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/texts/titles/BANDITS_002.ma";
+	setAttr -s 77 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"BANDITS_002RN"
+		"BANDITS_002RN" 0
+		"BANDITS_002RN" 198
+		0 "|BANDITS_002RNfosterParent1|rigidBody2" "|BANDITS_002:BANDITS|BANDITS_002:B" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape1" "|BANDITS_002:BANDITS|BANDITS_002:B" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody3" "|BANDITS_002:BANDITS|BANDITS_002:A" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape2" "|BANDITS_002:BANDITS|BANDITS_002:A" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody4" "|BANDITS_002:BANDITS|BANDITS_002:N" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape3" "|BANDITS_002:BANDITS|BANDITS_002:N" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody5" "|BANDITS_002:BANDITS|BANDITS_002:D" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape4" "|BANDITS_002:BANDITS|BANDITS_002:D" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody6" "|BANDITS_002:BANDITS|BANDITS_002:I" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape5" "|BANDITS_002:BANDITS|BANDITS_002:I" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody7" "|BANDITS_002:BANDITS|BANDITS_002:T" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape6" "|BANDITS_002:BANDITS|BANDITS_002:T" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|rigidBody8" "|BANDITS_002:BANDITS|BANDITS_002:S" 
+		"-s -r "
+		0 "|BANDITS_002RNfosterParent1|BANDITS_002:polySurfaceShape7" "|BANDITS_002:BANDITS|BANDITS_002:S" 
+		"-s -r "
+		2 "|BANDITS_002:BANDITS" "visibility" " 1"
+		2 "|BANDITS_002:BANDITS" "translate" " -type \"double3\" 0 0 0"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvPivot" " -type \"double2\" 0.5 0.5"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "instObjGroups.objectGroups[0].objectGrpColor" 
+		" -av"
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet" " -s 7"
+		
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[1].uvSetName" 
+		" -type \"string\" \"map11\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[2].uvSetName" 
+		" -type \"string\" \"map12\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[3].uvSetName" 
+		" -type \"string\" \"map13\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[4].uvSetName" 
+		" -type \"string\" \"map14\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[5].uvSetName" 
+		" -type \"string\" \"map15\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "uvSet[6].uvSetName" 
+		" -type \"string\" \"map16\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "currentUVSet" 
+		" -type \"string\" \"map1\""
+		2 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape" "pnts[0]" " -type \"float3\" 0 0 0"
+		
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId11.groupId" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "BANDITS_002:groupId15.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "BANDITS_002:groupId11.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "BANDITS_002:groupId13.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId12.groupId" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "BANDITS_002:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId13.groupId" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "BANDITS_002:groupId10.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "BANDITS_002:groupId12.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "BANDITS_002:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId14.groupId" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId10.groupId" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId9.groupId" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 ":initialShadingGroup.memberWireframeColor" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "BANDITS_002:groupId15.groupId" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateX" 
+		"BANDITS_002RN.placeHolderList[1]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateY" 
+		"BANDITS_002RN.placeHolderList[2]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.translateZ" 
+		"BANDITS_002RN.placeHolderList[3]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateX" "BANDITS_002RN.placeHolderList[4]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateY" "BANDITS_002RN.placeHolderList[5]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.rotateZ" "BANDITS_002RN.placeHolderList[6]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[7]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[8]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[9]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.message" 
+		"BANDITS_002RN.placeHolderList[10]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:B|BANDITS_002:BShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[11]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateX" 
+		"BANDITS_002RN.placeHolderList[12]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateY" 
+		"BANDITS_002RN.placeHolderList[13]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.translateZ" 
+		"BANDITS_002RN.placeHolderList[14]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateX" "BANDITS_002RN.placeHolderList[15]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateY" "BANDITS_002RN.placeHolderList[16]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.rotateZ" "BANDITS_002RN.placeHolderList[17]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[18]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[19]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[20]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.message" 
+		"BANDITS_002RN.placeHolderList[21]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:A|BANDITS_002:AShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[22]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateX" 
+		"BANDITS_002RN.placeHolderList[23]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateY" 
+		"BANDITS_002RN.placeHolderList[24]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.translateZ" 
+		"BANDITS_002RN.placeHolderList[25]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateX" "BANDITS_002RN.placeHolderList[26]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateY" "BANDITS_002RN.placeHolderList[27]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.rotateZ" "BANDITS_002RN.placeHolderList[28]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[29]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[30]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[31]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.message" 
+		"BANDITS_002RN.placeHolderList[32]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:N|BANDITS_002:NShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[33]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateX" 
+		"BANDITS_002RN.placeHolderList[34]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateY" 
+		"BANDITS_002RN.placeHolderList[35]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.translateZ" 
+		"BANDITS_002RN.placeHolderList[36]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateX" "BANDITS_002RN.placeHolderList[37]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateY" "BANDITS_002RN.placeHolderList[38]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.rotateZ" "BANDITS_002RN.placeHolderList[39]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[40]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[41]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[42]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.message" 
+		"BANDITS_002RN.placeHolderList[43]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:D|BANDITS_002:DShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[44]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateX" 
+		"BANDITS_002RN.placeHolderList[45]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateY" 
+		"BANDITS_002RN.placeHolderList[46]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.translateZ" 
+		"BANDITS_002RN.placeHolderList[47]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateX" "BANDITS_002RN.placeHolderList[48]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateY" "BANDITS_002RN.placeHolderList[49]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.rotateZ" "BANDITS_002RN.placeHolderList[50]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[51]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[52]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[53]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.message" 
+		"BANDITS_002RN.placeHolderList[54]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:I|BANDITS_002:IShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[55]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateX" 
+		"BANDITS_002RN.placeHolderList[56]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateY" 
+		"BANDITS_002RN.placeHolderList[57]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.translateZ" 
+		"BANDITS_002RN.placeHolderList[58]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateX" "BANDITS_002RN.placeHolderList[59]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateY" "BANDITS_002RN.placeHolderList[60]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.rotateZ" "BANDITS_002RN.placeHolderList[61]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[62]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[63]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[64]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.message" 
+		"BANDITS_002RN.placeHolderList[65]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:T|BANDITS_002:TShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[66]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateX" 
+		"BANDITS_002RN.placeHolderList[67]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateY" 
+		"BANDITS_002RN.placeHolderList[68]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.translateZ" 
+		"BANDITS_002RN.placeHolderList[69]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateX" "BANDITS_002RN.placeHolderList[70]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateY" "BANDITS_002RN.placeHolderList[71]" 
+		""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.rotateZ" "BANDITS_002RN.placeHolderList[72]" 
+		""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[73]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.instObjGroups" 
+		"BANDITS_002RN.placeHolderList[74]" ""
+		5 4 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.inMesh" 
+		"BANDITS_002RN.placeHolderList[75]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.message" 
+		"BANDITS_002RN.placeHolderList[76]" ""
+		5 3 "BANDITS_002RN" "|BANDITS_002:BANDITS|BANDITS_002:S|BANDITS_002:SShape.worldMatrix" 
+		"BANDITS_002RN.placeHolderList[77]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 createNode polyNormal -n "polyNormal1";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId16";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts1";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:162]";
 createNode polyNormal -n "polyNormal2";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId17";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts2";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:78]";
 createNode polyNormal -n "polyNormal3";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId18";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts3";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:95]";
 createNode polyNormal -n "polyNormal4";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId19";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts4";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:114]";
 createNode polyNormal -n "polyNormal5";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId20";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts5";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:77]";
 createNode polyNormal -n "polyNormal6";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId21";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts6";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:61]";
 createNode polyNormal -n "polyNormal7";
 	setAttr ".ics" -type "componentList" 1 "f[*]";
 	setAttr ".unm" no;
-createNode groupId -n "BANDITS_002:groupId22";
-	setAttr ".ihi" 0;
-createNode groupParts -n "BANDITS_002:groupParts7";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "f[0:174]";
 createNode hyperGraphInfo -n "nodeEditorPanel1Info";
 createNode hyperView -n "hyperView1";
+	setAttr ".vl" -type "double2" -66.973480449090403 -46.004645760743273 ;
+	setAttr ".vh" -type "double2" 70.883662408052501 41.85249709639961 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout1";
 	setAttr ".ihi" 0;
-	setAttr -s 88 ".hyp";
+	setAttr -s 105 ".hyp";
 	setAttr ".hyp[0].x" 1.4285714626312256;
 	setAttr ".hyp[0].y" -177.14285278320312;
 	setAttr ".hyp[0].nvs" 1920;
@@ -3377,74 +6875,125 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[85].nvs" 1920;
 	setAttr ".hyp[86].nvs" 1920;
 	setAttr ".hyp[87].nvs" 1920;
+	setAttr ".hyp[88].x" 2.6693766117095947;
+	setAttr ".hyp[88].y" 75.78106689453125;
+	setAttr ".hyp[88].nvs" 1920;
+	setAttr ".hyp[89].x" 199.81224060058594;
+	setAttr ".hyp[89].y" 41.852497100830078;
+	setAttr ".hyp[89].nvs" 1920;
+	setAttr ".hyp[90].x" 2.6693766117095947;
+	setAttr ".hyp[90].y" -2.7903599739074707;
+	setAttr ".hyp[90].nvs" 1920;
+	setAttr ".hyp[91].x" 2.6693766117095947;
+	setAttr ".hyp[91].y" -2.7903599739074707;
+	setAttr ".hyp[91].nvs" 1920;
+	setAttr ".hyp[92].x" 2.6693766117095947;
+	setAttr ".hyp[92].y" -2.7903599739074707;
+	setAttr ".hyp[92].nvs" 1920;
+	setAttr ".hyp[93].x" 2.6693766117095947;
+	setAttr ".hyp[93].y" -2.7903599739074707;
+	setAttr ".hyp[93].nvs" 1920;
+	setAttr ".hyp[94].x" 2.6693766117095947;
+	setAttr ".hyp[94].y" -2.7903599739074707;
+	setAttr ".hyp[94].nvs" 1920;
+	setAttr ".hyp[95].x" 2.6693766117095947;
+	setAttr ".hyp[95].y" -2.7903599739074707;
+	setAttr ".hyp[95].nvs" 1920;
+	setAttr ".hyp[96].x" 2.6693766117095947;
+	setAttr ".hyp[96].y" -2.7903599739074707;
+	setAttr ".hyp[96].nvs" 1920;
+	setAttr ".hyp[97].x" 2.6693766117095947;
+	setAttr ".hyp[97].y" -2.7903599739074707;
+	setAttr ".hyp[97].nvs" 1920;
+	setAttr ".hyp[98].x" 2.6693766117095947;
+	setAttr ".hyp[98].y" -2.7903599739074707;
+	setAttr ".hyp[98].nvs" 1920;
+	setAttr ".hyp[99].x" 2.6693766117095947;
+	setAttr ".hyp[99].y" -2.7903599739074707;
+	setAttr ".hyp[99].nvs" 1920;
+	setAttr ".hyp[100].x" 2.6693766117095947;
+	setAttr ".hyp[100].y" -2.7903599739074707;
+	setAttr ".hyp[100].nvs" 1920;
+	setAttr ".hyp[101].x" 2.6693766117095947;
+	setAttr ".hyp[101].y" -2.7903599739074707;
+	setAttr ".hyp[101].nvs" 1920;
+	setAttr ".hyp[102].x" 2.6693766117095947;
+	setAttr ".hyp[102].y" -2.7903599739074707;
+	setAttr ".hyp[102].nvs" 1920;
+	setAttr ".hyp[103].x" 2.6693766117095947;
+	setAttr ".hyp[103].y" -2.7903599739074707;
+	setAttr ".hyp[103].nvs" 1920;
+	setAttr ".hyp[104].x" 2.6693766117095947;
+	setAttr ".hyp[104].y" -2.7903599739074707;
+	setAttr ".hyp[104].nvs" 1920;
 	setAttr ".anf" yes;
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n"
 		+ "                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n"
-		+ "                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n"
+		+ "            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n"
+		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n"
+		+ "            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n"
+		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
+		+ "                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
+		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n"
-		+ "            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
-		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n"
-		+ "                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n"
-		+ "            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
+		+ "            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n"
+		+ "            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
+		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
+		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n"
+		+ "\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n"
+		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n"
+		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"camera1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n"
+		+ "                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n"
+		+ "                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n"
+		+ "                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
-		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n"
-		+ "                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n"
-		+ "                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n"
-		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
-		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
-		+ "            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
-		+ "                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n"
-		+ "                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n"
-		+ "            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n"
-		+ "            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
-		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
-		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
-		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
-		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n"
-		+ "                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
+		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n"
+		+ "                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
+		+ "            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
+		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
+		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                $editorName;\n\t\t\tif (`objExists nodeEditorPanel1Info`) nodeEditor -e -restoreInfo nodeEditorPanel1Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n"
+		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n"
+		+ "                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n"
+		+ "                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n"
-		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManControlsType\" (localizedPanelLabel(\"RenderMan Controls\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderManControlsType\" -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Controls\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderManLightingType\" (localizedPanelLabel(\"RenderMan Lighting\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderManLightingType\" -l (localizedPanelLabel(\"RenderMan Lighting\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"RenderMan Lighting\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n"
+		+ "\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 1 -size 10 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -3453,21 +7002,13 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode polySphere -n "polySphere1";
 createNode rigidSolver -n "rigidSolver";
 	setAttr ".stm" 1;
-	setAttr -s 8 ".gfr";
-	setAttr -s 8 ".t[0:7]" -type "double3" 3.2676059860671365 0.39310071432695648 
-		24.139045813733652 -1.8439086322042 1.5796050743761194 0.43247654530448154 1.24868099517635 
-		-0.16405249554025536 -1.8806632301182176 -13.155981602632643 1.6858733249314257 28.895028421704787 
-		15.20752661745578 0.0057241082668982868 40.469701921826491 12.599138447215651 1.6844789788879537 
-		19.140982802464183 4.6740667515874694 -3.0008730033055615 -3.2309763196585122 15.266500249634054 
-		-4.0444103380421925 -0.67555222385640912;
-	setAttr -s 8 ".t";
-	setAttr -s 8 ".r[0:7]" -type "double3" 2.0545871315439572 -1.7325747076164164 
-		0.053435754873155501 -64.454981210987228 60.82038203756251 -220.21794261882283 104.85127079564154 
-		-33.697955551365716 -111.43508804930318 -10.558208137963927 -25.68958513662875 394.04587285339579 
-		-3.5608536050666579 870.09035158879306 -3.6979351126847386 -189.61037759702961 -709.30770200741904 
-		-201.42262702875698 -69.655610814251517 -35.429963404624814 67.818114326517858 5.9729497686500155 
-		-1.6571167316230984 -222.76042666272679;
-	setAttr -s 8 ".r";
+	setAttr -s 15 ".gfr";
+	setAttr -s 15 ".t[0:14]" -type "double3" 3.2890971911714693 0.44841297470368457 
+		-50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0;
+	setAttr -s 15 ".t";
+	setAttr -s 15 ".r";
+	setAttr -s 15 ".r";
 	setAttr ".cur" yes;
 createNode choice -n "rigidBody_tx";
 	setAttr ".ihi" 0;
@@ -3702,19 +7243,461 @@ createNode animCurveTU -n "camera1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
+createNode reference -n "TitleBANDITS_004RN";
+	setAttr -s 56 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TitleBANDITS_004RN"
+		"TitleBANDITS_004RN" 0
+		"TitleBANDITS_004RN" 68
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody9" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody10" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody11" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody12" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody13" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody14" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T" 
+		"-s -r "
+		0 "|TitleBANDITS_004RNfosterParent1|rigidBody15" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S" 
+		"-s -r "
+		2 "|TitleBANDITS_004:_UNKNOWN_REF_NODE_fosterParent1" "visibility" " 0"
+		2 "|TitleBANDITS_004:BANDITS" "visibility" " 0"
+		2 "|TitleBANDITS_004:BANDITS" "translate" " -type \"double3\" 0 5 0"
+		2 "|TitleBANDITS_004:defaultLight" "visibility" " 0"
+		2 "|TitleBANDITS_004:defaultLight" "rotate" " -type \"double3\" -49.65899052331579355 5.87010853160978829 -2.71790733900835635"
+		
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[1]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[2]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[3]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[4]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[5]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[6]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[7]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:B|TitleBANDITS_004:BShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[8]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[9]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[10]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[11]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[12]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[13]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[14]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[15]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:A|TitleBANDITS_004:AShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[16]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[17]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[18]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[19]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[20]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[21]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[22]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[23]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:N|TitleBANDITS_004:NShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[24]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[25]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[26]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[27]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[28]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[29]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[30]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[31]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:D|TitleBANDITS_004:DShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[32]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[33]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[34]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[35]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[36]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[37]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[38]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[39]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:I|TitleBANDITS_004:IShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[40]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[41]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[42]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[43]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[44]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[45]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[46]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[47]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:T|TitleBANDITS_004:TShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[48]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.translateX" 
+		"TitleBANDITS_004RN.placeHolderList[49]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.translateY" 
+		"TitleBANDITS_004RN.placeHolderList[50]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.translateZ" 
+		"TitleBANDITS_004RN.placeHolderList[51]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.rotateX" 
+		"TitleBANDITS_004RN.placeHolderList[52]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.rotateY" 
+		"TitleBANDITS_004RN.placeHolderList[53]" ""
+		5 4 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.rotateZ" 
+		"TitleBANDITS_004RN.placeHolderList[54]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S.worldMatrix" 
+		"TitleBANDITS_004RN.placeHolderList[55]" ""
+		5 3 "TitleBANDITS_004RN" "|TitleBANDITS_004:BANDITS|TitleBANDITS_004:S|TitleBANDITS_004:SShape.message" 
+		"TitleBANDITS_004RN.placeHolderList[56]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode choice -n "rigidBody_tx8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz8";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz9";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz10";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz11";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz12";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz13";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tx14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ty14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_tz14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rx14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_ry14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode choice -n "rigidBody_rz14";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".i";
+	setAttr ".i[1]" 0;
+createNode partition -n "mtorPartition";
+	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
+	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
+	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
+	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
+	setAttr ".sr" -type "string" "";
+createNode PxrDisney -n "PxrDisney1";
+createNode shadingEngine -n "PxrDisney1SG";
+	setAttr ".ihi" 0;
+	setAttr -s 7 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+createNode file -n "file1";
+	setAttr ".ftn" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//sourceimages/TitleBandits001.png";
+createNode place2dTexture -n "place2dTexture1";
+createNode shadingEngine -n "PxrDisney2SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+createNode shadingEngine -n "PxrDisney3SG";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+createNode file -n "file2";
+	setAttr ".ftn" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//sourceimages/TitleBandits001.png";
+createNode place2dTexture -n "place2dTexture2";
+createNode file -n "file3";
+	setAttr ".ftn" -type "string" "/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//sourceimages/TitleBandits001.png";
+createNode place2dTexture -n "place2dTexture3";
+createNode polyAutoProj -n "polyAutoProj1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:78]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 1.0055999159812927 1.0055999159812927 1.0055999159812927 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:162]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92276854270203168 0.92276854270203168 0.92276854270203168 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:95]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92102169438459736 0.92102169438459736 0.92102169438459736 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:114]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92231999920405139 0.92231999920405139 0.92231999920405139 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:77]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92102169438459724 0.92102169438459724 0.92102169438459724 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:61]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92102169438459747 0.92102169438459747 0.92102169438459747 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyAutoProj -n "polyAutoProj7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:174]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1.2299969542866571 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 0.92224868496975076 0.92224868496975076 0.92224868496975076 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 60;
-	setAttr ".unw" 60;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 2 ".st";
+	setAttr -s 8 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -3727,21 +7710,25 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 2 ".s";
+	setAttr -s 6 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 7 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
+select -ne :lightList1;
+select -ne :defaultTextureList1;
+	setAttr -s 7 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 8 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -3750,7 +7737,6 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 7 ".gn";
 	setAttr -cb on ".mimt";
 	setAttr -cb on ".miop";
 	setAttr -cb on ".mise";
@@ -3784,7 +7770,7 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".mirw";
 select -ne :defaultRenderGlobals;
 	setAttr ".mcfr" 30;
-	setAttr ".ren" -type "string" "mentalRay";
+	setAttr ".ren" -type "string" "renderManRIS";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
@@ -3802,6 +7788,7 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".zsl";
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
+select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -3883,90 +7870,139 @@ connectAttr "rigidBody_rx1.o" "BANDITS_002RN.phl[4]";
 connectAttr "rigidBody_ry1.o" "BANDITS_002RN.phl[5]";
 connectAttr "rigidBody_rz1.o" "BANDITS_002RN.phl[6]";
 connectAttr "BANDITS_002RN.phl[7]" "rigidBody2.rmx";
-connectAttr "BANDITS_002RN.phl[8]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId16.id" "BANDITS_002RN.phl[9]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[10]";
-connectAttr "polyNormal1.out" "BANDITS_002RN.phl[11]";
-connectAttr "BANDITS_002RN.phl[12]" "rigidBody2.igm[0]";
-connectAttr "rigidBody_tx2.o" "BANDITS_002RN.phl[13]";
-connectAttr "rigidBody_ty2.o" "BANDITS_002RN.phl[14]";
-connectAttr "rigidBody_tz2.o" "BANDITS_002RN.phl[15]";
-connectAttr "rigidBody_rx2.o" "BANDITS_002RN.phl[16]";
-connectAttr "rigidBody_ry2.o" "BANDITS_002RN.phl[17]";
-connectAttr "rigidBody_rz2.o" "BANDITS_002RN.phl[18]";
-connectAttr "BANDITS_002RN.phl[19]" "rigidBody3.rmx";
-connectAttr "BANDITS_002RN.phl[20]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId17.id" "BANDITS_002RN.phl[21]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[22]";
-connectAttr "polyNormal2.out" "BANDITS_002RN.phl[23]";
-connectAttr "BANDITS_002RN.phl[24]" "rigidBody3.igm[0]";
-connectAttr "rigidBody_tx3.o" "BANDITS_002RN.phl[25]";
-connectAttr "rigidBody_ty3.o" "BANDITS_002RN.phl[26]";
-connectAttr "rigidBody_tz3.o" "BANDITS_002RN.phl[27]";
-connectAttr "rigidBody_rx3.o" "BANDITS_002RN.phl[28]";
-connectAttr "rigidBody_ry3.o" "BANDITS_002RN.phl[29]";
-connectAttr "rigidBody_rz3.o" "BANDITS_002RN.phl[30]";
-connectAttr "BANDITS_002RN.phl[31]" "rigidBody4.rmx";
-connectAttr "BANDITS_002RN.phl[32]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId18.id" "BANDITS_002RN.phl[33]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[34]";
-connectAttr "polyNormal3.out" "BANDITS_002RN.phl[35]";
-connectAttr "BANDITS_002RN.phl[36]" "rigidBody4.igm[0]";
-connectAttr "rigidBody_tx4.o" "BANDITS_002RN.phl[37]";
-connectAttr "rigidBody_ty4.o" "BANDITS_002RN.phl[38]";
-connectAttr "rigidBody_tz4.o" "BANDITS_002RN.phl[39]";
-connectAttr "rigidBody_rx4.o" "BANDITS_002RN.phl[40]";
-connectAttr "rigidBody_ry4.o" "BANDITS_002RN.phl[41]";
-connectAttr "rigidBody_rz4.o" "BANDITS_002RN.phl[42]";
-connectAttr "BANDITS_002RN.phl[43]" "rigidBody5.rmx";
-connectAttr "BANDITS_002RN.phl[44]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId19.id" "BANDITS_002RN.phl[45]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[46]";
-connectAttr "polyNormal4.out" "BANDITS_002RN.phl[47]";
-connectAttr "BANDITS_002RN.phl[48]" "rigidBody5.igm[0]";
-connectAttr "rigidBody_tx5.o" "BANDITS_002RN.phl[49]";
-connectAttr "rigidBody_ty5.o" "BANDITS_002RN.phl[50]";
-connectAttr "rigidBody_tz5.o" "BANDITS_002RN.phl[51]";
-connectAttr "rigidBody_rx5.o" "BANDITS_002RN.phl[52]";
-connectAttr "rigidBody_ry5.o" "BANDITS_002RN.phl[53]";
-connectAttr "rigidBody_rz5.o" "BANDITS_002RN.phl[54]";
-connectAttr "BANDITS_002RN.phl[55]" "rigidBody6.rmx";
-connectAttr "BANDITS_002RN.phl[56]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId20.id" "BANDITS_002RN.phl[57]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[58]";
-connectAttr "polyNormal5.out" "BANDITS_002RN.phl[59]";
-connectAttr "BANDITS_002RN.phl[60]" "rigidBody6.igm[0]";
-connectAttr "rigidBody_tx6.o" "BANDITS_002RN.phl[61]";
-connectAttr "rigidBody_ty6.o" "BANDITS_002RN.phl[62]";
-connectAttr "rigidBody_tz6.o" "BANDITS_002RN.phl[63]";
-connectAttr "rigidBody_rx6.o" "BANDITS_002RN.phl[64]";
-connectAttr "rigidBody_ry6.o" "BANDITS_002RN.phl[65]";
-connectAttr "rigidBody_rz6.o" "BANDITS_002RN.phl[66]";
-connectAttr "BANDITS_002RN.phl[67]" "rigidBody7.rmx";
-connectAttr "BANDITS_002RN.phl[68]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId21.id" "BANDITS_002RN.phl[69]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[70]";
-connectAttr "polyNormal6.out" "BANDITS_002RN.phl[71]";
-connectAttr "BANDITS_002RN.phl[72]" "rigidBody7.igm[0]";
-connectAttr "rigidBody_tx7.o" "BANDITS_002RN.phl[73]";
-connectAttr "rigidBody_ty7.o" "BANDITS_002RN.phl[74]";
-connectAttr "rigidBody_tz7.o" "BANDITS_002RN.phl[75]";
-connectAttr "rigidBody_rx7.o" "BANDITS_002RN.phl[76]";
-connectAttr "rigidBody_ry7.o" "BANDITS_002RN.phl[77]";
-connectAttr "rigidBody_rz7.o" "BANDITS_002RN.phl[78]";
-connectAttr "BANDITS_002RN.phl[79]" "rigidBody8.rmx";
-connectAttr "BANDITS_002RN.phl[80]" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId22.id" "BANDITS_002RN.phl[81]";
-connectAttr ":initialShadingGroup.mwc" "BANDITS_002RN.phl[82]";
-connectAttr "polyNormal7.out" "BANDITS_002RN.phl[83]";
-connectAttr "BANDITS_002RN.phl[84]" "rigidBody8.igm[0]";
+connectAttr "BANDITS_002RN.phl[8]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj2.out" "BANDITS_002RN.phl[9]";
+connectAttr "BANDITS_002RN.phl[10]" "rigidBody2.igm[0]";
+connectAttr "BANDITS_002RN.phl[11]" "polyAutoProj2.mp";
+connectAttr "rigidBody_tx2.o" "BANDITS_002RN.phl[12]";
+connectAttr "rigidBody_ty2.o" "BANDITS_002RN.phl[13]";
+connectAttr "rigidBody_tz2.o" "BANDITS_002RN.phl[14]";
+connectAttr "rigidBody_rx2.o" "BANDITS_002RN.phl[15]";
+connectAttr "rigidBody_ry2.o" "BANDITS_002RN.phl[16]";
+connectAttr "rigidBody_rz2.o" "BANDITS_002RN.phl[17]";
+connectAttr "BANDITS_002RN.phl[18]" "rigidBody3.rmx";
+connectAttr "BANDITS_002RN.phl[19]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj1.out" "BANDITS_002RN.phl[20]";
+connectAttr "BANDITS_002RN.phl[21]" "rigidBody3.igm[0]";
+connectAttr "BANDITS_002RN.phl[22]" "polyAutoProj1.mp";
+connectAttr "rigidBody_tx3.o" "BANDITS_002RN.phl[23]";
+connectAttr "rigidBody_ty3.o" "BANDITS_002RN.phl[24]";
+connectAttr "rigidBody_tz3.o" "BANDITS_002RN.phl[25]";
+connectAttr "rigidBody_rx3.o" "BANDITS_002RN.phl[26]";
+connectAttr "rigidBody_ry3.o" "BANDITS_002RN.phl[27]";
+connectAttr "rigidBody_rz3.o" "BANDITS_002RN.phl[28]";
+connectAttr "BANDITS_002RN.phl[29]" "rigidBody4.rmx";
+connectAttr "BANDITS_002RN.phl[30]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj3.out" "BANDITS_002RN.phl[31]";
+connectAttr "BANDITS_002RN.phl[32]" "rigidBody4.igm[0]";
+connectAttr "BANDITS_002RN.phl[33]" "polyAutoProj3.mp";
+connectAttr "rigidBody_tx4.o" "BANDITS_002RN.phl[34]";
+connectAttr "rigidBody_ty4.o" "BANDITS_002RN.phl[35]";
+connectAttr "rigidBody_tz4.o" "BANDITS_002RN.phl[36]";
+connectAttr "rigidBody_rx4.o" "BANDITS_002RN.phl[37]";
+connectAttr "rigidBody_ry4.o" "BANDITS_002RN.phl[38]";
+connectAttr "rigidBody_rz4.o" "BANDITS_002RN.phl[39]";
+connectAttr "BANDITS_002RN.phl[40]" "rigidBody5.rmx";
+connectAttr "BANDITS_002RN.phl[41]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj4.out" "BANDITS_002RN.phl[42]";
+connectAttr "BANDITS_002RN.phl[43]" "rigidBody5.igm[0]";
+connectAttr "BANDITS_002RN.phl[44]" "polyAutoProj4.mp";
+connectAttr "rigidBody_tx5.o" "BANDITS_002RN.phl[45]";
+connectAttr "rigidBody_ty5.o" "BANDITS_002RN.phl[46]";
+connectAttr "rigidBody_tz5.o" "BANDITS_002RN.phl[47]";
+connectAttr "rigidBody_rx5.o" "BANDITS_002RN.phl[48]";
+connectAttr "rigidBody_ry5.o" "BANDITS_002RN.phl[49]";
+connectAttr "rigidBody_rz5.o" "BANDITS_002RN.phl[50]";
+connectAttr "BANDITS_002RN.phl[51]" "rigidBody6.rmx";
+connectAttr "BANDITS_002RN.phl[52]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj5.out" "BANDITS_002RN.phl[53]";
+connectAttr "BANDITS_002RN.phl[54]" "rigidBody6.igm[0]";
+connectAttr "BANDITS_002RN.phl[55]" "polyAutoProj5.mp";
+connectAttr "rigidBody_tx6.o" "BANDITS_002RN.phl[56]";
+connectAttr "rigidBody_ty6.o" "BANDITS_002RN.phl[57]";
+connectAttr "rigidBody_tz6.o" "BANDITS_002RN.phl[58]";
+connectAttr "rigidBody_rx6.o" "BANDITS_002RN.phl[59]";
+connectAttr "rigidBody_ry6.o" "BANDITS_002RN.phl[60]";
+connectAttr "rigidBody_rz6.o" "BANDITS_002RN.phl[61]";
+connectAttr "BANDITS_002RN.phl[62]" "rigidBody7.rmx";
+connectAttr "BANDITS_002RN.phl[63]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj6.out" "BANDITS_002RN.phl[64]";
+connectAttr "BANDITS_002RN.phl[65]" "rigidBody7.igm[0]";
+connectAttr "BANDITS_002RN.phl[66]" "polyAutoProj6.mp";
+connectAttr "rigidBody_tx7.o" "BANDITS_002RN.phl[67]";
+connectAttr "rigidBody_ty7.o" "BANDITS_002RN.phl[68]";
+connectAttr "rigidBody_tz7.o" "BANDITS_002RN.phl[69]";
+connectAttr "rigidBody_rx7.o" "BANDITS_002RN.phl[70]";
+connectAttr "rigidBody_ry7.o" "BANDITS_002RN.phl[71]";
+connectAttr "rigidBody_rz7.o" "BANDITS_002RN.phl[72]";
+connectAttr "BANDITS_002RN.phl[73]" "rigidBody8.rmx";
+connectAttr "BANDITS_002RN.phl[74]" "PxrDisney1SG.dsm" -na;
+connectAttr "polyAutoProj7.out" "BANDITS_002RN.phl[75]";
+connectAttr "BANDITS_002RN.phl[76]" "rigidBody8.igm[0]";
+connectAttr "BANDITS_002RN.phl[77]" "polyAutoProj7.mp";
+connectAttr "rigidBody_tx8.o" "TitleBANDITS_004RN.phl[1]";
+connectAttr "rigidBody_ty8.o" "TitleBANDITS_004RN.phl[2]";
+connectAttr "rigidBody_tz8.o" "TitleBANDITS_004RN.phl[3]";
+connectAttr "rigidBody_rx8.o" "TitleBANDITS_004RN.phl[4]";
+connectAttr "rigidBody_ry8.o" "TitleBANDITS_004RN.phl[5]";
+connectAttr "rigidBody_rz8.o" "TitleBANDITS_004RN.phl[6]";
+connectAttr "TitleBANDITS_004RN.phl[7]" "rigidBody9.rmx";
+connectAttr "TitleBANDITS_004RN.phl[8]" "rigidBody9.igm[0]";
+connectAttr "rigidBody_tx9.o" "TitleBANDITS_004RN.phl[9]";
+connectAttr "rigidBody_ty9.o" "TitleBANDITS_004RN.phl[10]";
+connectAttr "rigidBody_tz9.o" "TitleBANDITS_004RN.phl[11]";
+connectAttr "rigidBody_rx9.o" "TitleBANDITS_004RN.phl[12]";
+connectAttr "rigidBody_ry9.o" "TitleBANDITS_004RN.phl[13]";
+connectAttr "rigidBody_rz9.o" "TitleBANDITS_004RN.phl[14]";
+connectAttr "TitleBANDITS_004RN.phl[15]" "rigidBody10.rmx";
+connectAttr "TitleBANDITS_004RN.phl[16]" "rigidBody10.igm[0]";
+connectAttr "rigidBody_tx10.o" "TitleBANDITS_004RN.phl[17]";
+connectAttr "rigidBody_ty10.o" "TitleBANDITS_004RN.phl[18]";
+connectAttr "rigidBody_tz10.o" "TitleBANDITS_004RN.phl[19]";
+connectAttr "rigidBody_rx10.o" "TitleBANDITS_004RN.phl[20]";
+connectAttr "rigidBody_ry10.o" "TitleBANDITS_004RN.phl[21]";
+connectAttr "rigidBody_rz10.o" "TitleBANDITS_004RN.phl[22]";
+connectAttr "TitleBANDITS_004RN.phl[23]" "rigidBody11.rmx";
+connectAttr "TitleBANDITS_004RN.phl[24]" "rigidBody11.igm[0]";
+connectAttr "rigidBody_tx11.o" "TitleBANDITS_004RN.phl[25]";
+connectAttr "rigidBody_ty11.o" "TitleBANDITS_004RN.phl[26]";
+connectAttr "rigidBody_tz11.o" "TitleBANDITS_004RN.phl[27]";
+connectAttr "rigidBody_rx11.o" "TitleBANDITS_004RN.phl[28]";
+connectAttr "rigidBody_ry11.o" "TitleBANDITS_004RN.phl[29]";
+connectAttr "rigidBody_rz11.o" "TitleBANDITS_004RN.phl[30]";
+connectAttr "TitleBANDITS_004RN.phl[31]" "rigidBody12.rmx";
+connectAttr "TitleBANDITS_004RN.phl[32]" "rigidBody12.igm[0]";
+connectAttr "rigidBody_tx12.o" "TitleBANDITS_004RN.phl[33]";
+connectAttr "rigidBody_ty12.o" "TitleBANDITS_004RN.phl[34]";
+connectAttr "rigidBody_tz12.o" "TitleBANDITS_004RN.phl[35]";
+connectAttr "rigidBody_rx12.o" "TitleBANDITS_004RN.phl[36]";
+connectAttr "rigidBody_ry12.o" "TitleBANDITS_004RN.phl[37]";
+connectAttr "rigidBody_rz12.o" "TitleBANDITS_004RN.phl[38]";
+connectAttr "TitleBANDITS_004RN.phl[39]" "rigidBody13.rmx";
+connectAttr "TitleBANDITS_004RN.phl[40]" "rigidBody13.igm[0]";
+connectAttr "rigidBody_tx13.o" "TitleBANDITS_004RN.phl[41]";
+connectAttr "rigidBody_ty13.o" "TitleBANDITS_004RN.phl[42]";
+connectAttr "rigidBody_tz13.o" "TitleBANDITS_004RN.phl[43]";
+connectAttr "rigidBody_rx13.o" "TitleBANDITS_004RN.phl[44]";
+connectAttr "rigidBody_ry13.o" "TitleBANDITS_004RN.phl[45]";
+connectAttr "rigidBody_rz13.o" "TitleBANDITS_004RN.phl[46]";
+connectAttr "TitleBANDITS_004RN.phl[47]" "rigidBody14.rmx";
+connectAttr "TitleBANDITS_004RN.phl[48]" "rigidBody14.igm[0]";
+connectAttr "rigidBody_tx14.o" "TitleBANDITS_004RN.phl[49]";
+connectAttr "rigidBody_ty14.o" "TitleBANDITS_004RN.phl[50]";
+connectAttr "rigidBody_tz14.o" "TitleBANDITS_004RN.phl[51]";
+connectAttr "rigidBody_rx14.o" "TitleBANDITS_004RN.phl[52]";
+connectAttr "rigidBody_ry14.o" "TitleBANDITS_004RN.phl[53]";
+connectAttr "rigidBody_rz14.o" "TitleBANDITS_004RN.phl[54]";
+connectAttr "TitleBANDITS_004RN.phl[55]" "rigidBody15.rmx";
+connectAttr "TitleBANDITS_004RN.phl[56]" "rigidBody15.igm[0]";
 connectAttr "camera1_translateX.o" "camera1.tx";
 connectAttr "camera1_translateY.o" "camera1.ty";
 connectAttr "camera1_translateZ.o" "camera1.tz";
-connectAttr "camera1_visibility.o" "camera1.v";
 connectAttr "camera1_rotateX.o" "camera1.rx";
 connectAttr "camera1_rotateY.o" "camera1.ry";
 connectAttr "camera1_rotateZ.o" "camera1.rz";
+connectAttr "camera1_visibility.o" "camera1.v";
 connectAttr "camera1_scaleX.o" "camera1.sx";
 connectAttr "camera1_scaleY.o" "camera1.sy";
 connectAttr "camera1_scaleZ.o" "camera1.sz";
@@ -3987,39 +8023,144 @@ connectAttr ":time1.o" "rigidBody5.ct";
 connectAttr ":time1.o" "rigidBody4.ct";
 connectAttr ":time1.o" "rigidBody3.ct";
 connectAttr ":time1.o" "rigidBody2.ct";
-relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-connectAttr "layerManager.dli[0]" "defaultLayer.id";
-connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "BANDITS_002RNfosterParent1.msg" "BANDITS_002RN.fp";
+connectAttr ":time1.o" "rigidBody15.ct";
+connectAttr ":time1.o" "rigidBody14.ct";
+connectAttr ":time1.o" "rigidBody13.ct";
+connectAttr ":time1.o" "rigidBody12.ct";
+connectAttr ":time1.o" "rigidBody11.ct";
+connectAttr ":time1.o" "rigidBody10.ct";
+connectAttr ":time1.o" "rigidBody9.ct";
+connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanPreviewGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanReyesRerenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanDeepShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanAreaShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanShadowGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanBakeGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanBakeRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSMakeBrickmapGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSDiffuseGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSOrganizeGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakeBrickmapGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakePtCloudGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBPtRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanSBMakePtexGlobals.msg" ":renderManRISGlobals.p" -na;
+connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
+connectAttr ":rmanPreviewOutputGlobals0.msg" ":rmanPreviewGlobals.d" -na;
+connectAttr ":rmanRerenderOutputGlobals0.msg" ":rmanRerenderGlobals.d" -na;
+connectAttr ":rmanReyesRerenderOutputGlobals0.msg" ":rmanReyesRerenderGlobals.d"
+		 -na;
+connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+		;
+connectAttr ":rmanDeepShadowOutputGlobals0.msg" ":rmanDeepShadowGlobals.d" -na;
+connectAttr ":rmanDeepShadowOutputGlobals1.msg" ":rmanDeepShadowGlobals.d" -na;
+connectAttr ":rmanAreaShadowOutputGlobals0.msg" ":rmanAreaShadowGlobals.d" -na;
+connectAttr ":rmanAreaShadowOutputGlobals1.msg" ":rmanAreaShadowGlobals.d" -na;
+connectAttr ":rmanShadowOutputGlobals0.msg" ":rmanShadowGlobals.d" -na;
+connectAttr ":rmanBakeRenderGlobals.msg" ":rmanBakeGlobals.p" -na;
+connectAttr ":rmanBakeRenderOutputGlobals0.msg" ":rmanBakeRenderGlobals.d" -na;
+connectAttr ":rmanBakeRenderChannelGlobals0.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals1.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals2.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals3.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals4.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals5.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals6.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals7.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals8.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals9.msg" ":rmanBakeRenderGlobals.c" -na;
+connectAttr ":rmanBakeRenderChannelGlobals10.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals11.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals12.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals13.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals14.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals15.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals16.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals17.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals18.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals19.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals20.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals21.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals22.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals23.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals24.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals25.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals26.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals27.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals28.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals29.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals30.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanBakeRenderChannelGlobals31.msg" ":rmanBakeRenderGlobals.c" -na
+		;
+connectAttr ":rmanSSDiffuseGlobals.msg" ":rmanSSMakeBrickmapGlobals.p" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":rmanSSDiffuseGlobals.p" -na;
+connectAttr ":rmanSSRenderOutputGlobals0.msg" ":rmanSSRenderGlobals.d" -na;
+connectAttr ":rmanSSRenderChannelGlobals0.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals1.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals2.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderChannelGlobals3.msg" ":rmanSSRenderGlobals.c" -na;
+connectAttr ":rmanSSRenderGlobals.msg" ":rmanSSOrganizeGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakeBrickmapGlobals.p" -na;
+connectAttr ":rmanSBRenderOutputGlobals0.msg" ":rmanSBRenderGlobals.d" -na;
+connectAttr ":rmanSBRenderChannelGlobals0.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals1.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals2.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals3.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals4.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderChannelGlobals5.msg" ":rmanSBRenderGlobals.c" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtCloudGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBPtRenderGlobals.p" -na;
+connectAttr ":rmanSBRenderGlobals.msg" ":rmanSBMakePtexGlobals.p" -na;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
 connectAttr ":miDefaultOptions.msg" ":mentalrayGlobals.opt";
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayGlobals.fb";
-connectAttr "BANDITS_002:groupParts1.og" "polyNormal1.ip";
-connectAttr "BANDITS_002:polySurfaceShape1.o" "BANDITS_002:groupParts1.ig";
-connectAttr "BANDITS_002:groupId16.id" "BANDITS_002:groupParts1.gi";
-connectAttr "BANDITS_002:groupParts2.og" "polyNormal2.ip";
-connectAttr "BANDITS_002:polySurfaceShape2.o" "BANDITS_002:groupParts2.ig";
-connectAttr "BANDITS_002:groupId17.id" "BANDITS_002:groupParts2.gi";
-connectAttr "BANDITS_002:groupParts3.og" "polyNormal3.ip";
-connectAttr "BANDITS_002:polySurfaceShape3.o" "BANDITS_002:groupParts3.ig";
-connectAttr "BANDITS_002:groupId18.id" "BANDITS_002:groupParts3.gi";
-connectAttr "BANDITS_002:groupParts4.og" "polyNormal4.ip";
-connectAttr "BANDITS_002:polySurfaceShape4.o" "BANDITS_002:groupParts4.ig";
-connectAttr "BANDITS_002:groupId19.id" "BANDITS_002:groupParts4.gi";
-connectAttr "BANDITS_002:groupParts5.og" "polyNormal5.ip";
-connectAttr "BANDITS_002:polySurfaceShape5.o" "BANDITS_002:groupParts5.ig";
-connectAttr "BANDITS_002:groupId20.id" "BANDITS_002:groupParts5.gi";
-connectAttr "BANDITS_002:groupParts6.og" "polyNormal6.ip";
-connectAttr "BANDITS_002:polySurfaceShape6.o" "BANDITS_002:groupParts6.ig";
-connectAttr "BANDITS_002:groupId21.id" "BANDITS_002:groupParts6.gi";
-connectAttr "BANDITS_002:groupParts7.og" "polyNormal7.ip";
-connectAttr "BANDITS_002:polySurfaceShape7.o" "BANDITS_002:groupParts7.ig";
-connectAttr "BANDITS_002:groupId22.id" "BANDITS_002:groupParts7.gi";
+relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "PxrDisney1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "PxrDisney2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "PxrDisney3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "PxrDisney1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "PxrDisney2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "PxrDisney3SG.message" ":defaultLightSet.message";
+connectAttr "layerManager.dli[0]" "defaultLayer.id";
+connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "BANDITS_002RNfosterParent1.msg" "BANDITS_002RN.fp";
+connectAttr "BANDITS_002:polySurfaceShape1.o" "polyNormal1.ip";
+connectAttr "BANDITS_002:polySurfaceShape2.o" "polyNormal2.ip";
+connectAttr "BANDITS_002:polySurfaceShape3.o" "polyNormal3.ip";
+connectAttr "BANDITS_002:polySurfaceShape4.o" "polyNormal4.ip";
+connectAttr "BANDITS_002:polySurfaceShape5.o" "polyNormal5.ip";
+connectAttr "BANDITS_002:polySurfaceShape6.o" "polyNormal6.ip";
+connectAttr "BANDITS_002:polySurfaceShape7.o" "polyNormal7.ip";
 connectAttr "hyperView1.msg" "nodeEditorPanel1Info.b[0]";
 connectAttr "hyperLayout1.msg" "hyperView1.hl";
 connectAttr "camera1.msg" "hyperLayout1.hyp[0].dn";
@@ -4110,6 +8251,23 @@ connectAttr "camera1_rotateZ.msg" "hyperLayout1.hyp[84].dn";
 connectAttr "camera1_scaleX.msg" "hyperLayout1.hyp[85].dn";
 connectAttr "camera1_scaleY.msg" "hyperLayout1.hyp[86].dn";
 connectAttr "camera1_scaleZ.msg" "hyperLayout1.hyp[87].dn";
+connectAttr "PxrDisney1.msg" "hyperLayout1.hyp[88].dn";
+connectAttr "PxrDisney1SG.msg" "hyperLayout1.hyp[89].dn";
+connectAttr "file1.msg" "hyperLayout1.hyp[90].dn";
+connectAttr "place2dTexture1.msg" "hyperLayout1.hyp[91].dn";
+connectAttr "PxrDisney2SG.msg" "hyperLayout1.hyp[92].dn";
+connectAttr "PxrDisney3SG.msg" "hyperLayout1.hyp[93].dn";
+connectAttr "file2.msg" "hyperLayout1.hyp[94].dn";
+connectAttr "place2dTexture2.msg" "hyperLayout1.hyp[95].dn";
+connectAttr "file3.msg" "hyperLayout1.hyp[96].dn";
+connectAttr "place2dTexture3.msg" "hyperLayout1.hyp[97].dn";
+connectAttr "polyAutoProj1.msg" "hyperLayout1.hyp[98].dn";
+connectAttr "polyAutoProj2.msg" "hyperLayout1.hyp[99].dn";
+connectAttr "polyAutoProj3.msg" "hyperLayout1.hyp[100].dn";
+connectAttr "polyAutoProj4.msg" "hyperLayout1.hyp[101].dn";
+connectAttr "polyAutoProj5.msg" "hyperLayout1.hyp[102].dn";
+connectAttr "polyAutoProj6.msg" "hyperLayout1.hyp[103].dn";
+connectAttr "polyAutoProj7.msg" "hyperLayout1.hyp[104].dn";
 connectAttr ":time1.o" "rigidSolver.ct";
 connectAttr "rigidBody1.gfr" "rigidSolver.gfr[0]";
 connectAttr "rigidBody2.gfr" "rigidSolver.gfr[1]";
@@ -4119,6 +8277,13 @@ connectAttr "rigidBody5.gfr" "rigidSolver.gfr[4]";
 connectAttr "rigidBody6.gfr" "rigidSolver.gfr[5]";
 connectAttr "rigidBody7.gfr" "rigidSolver.gfr[6]";
 connectAttr "rigidBody8.gfr" "rigidSolver.gfr[7]";
+connectAttr "rigidBody9.gfr" "rigidSolver.gfr[8]";
+connectAttr "rigidBody10.gfr" "rigidSolver.gfr[9]";
+connectAttr "rigidBody11.gfr" "rigidSolver.gfr[10]";
+connectAttr "rigidBody12.gfr" "rigidSolver.gfr[11]";
+connectAttr "rigidBody13.gfr" "rigidSolver.gfr[12]";
+connectAttr "rigidBody14.gfr" "rigidSolver.gfr[13]";
+connectAttr "rigidBody15.gfr" "rigidSolver.gfr[14]";
 connectAttr "rigidBody1.chc" "rigidBody_tx.s";
 connectAttr "rigidSolver.t[0].tx" "rigidBody_tx.i[0]";
 connectAttr "rigidBody1.chc" "rigidBody_ty.s";
@@ -4215,16 +8380,173 @@ connectAttr "rigidBody8.chc" "rigidBody_ry7.s";
 connectAttr "rigidSolver.r[7].ry" "rigidBody_ry7.i[0]";
 connectAttr "rigidBody8.chc" "rigidBody_rz7.s";
 connectAttr "rigidSolver.r[7].rz" "rigidBody_rz7.i[0]";
+connectAttr "TitleBANDITS_004RNfosterParent1.msg" "TitleBANDITS_004RN.fp";
+connectAttr "rigidBody9.chc" "rigidBody_tx8.s";
+connectAttr "rigidSolver.t[8].tx" "rigidBody_tx8.i[0]";
+connectAttr "rigidBody9.chc" "rigidBody_ty8.s";
+connectAttr "rigidSolver.t[8].ty" "rigidBody_ty8.i[0]";
+connectAttr "rigidBody9.chc" "rigidBody_tz8.s";
+connectAttr "rigidSolver.t[8].tz" "rigidBody_tz8.i[0]";
+connectAttr "rigidBody9.chc" "rigidBody_rx8.s";
+connectAttr "rigidSolver.r[8].rx" "rigidBody_rx8.i[0]";
+connectAttr "rigidBody9.chc" "rigidBody_ry8.s";
+connectAttr "rigidSolver.r[8].ry" "rigidBody_ry8.i[0]";
+connectAttr "rigidBody9.chc" "rigidBody_rz8.s";
+connectAttr "rigidSolver.r[8].rz" "rigidBody_rz8.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_tx9.s";
+connectAttr "rigidSolver.t[9].tx" "rigidBody_tx9.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_ty9.s";
+connectAttr "rigidSolver.t[9].ty" "rigidBody_ty9.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_tz9.s";
+connectAttr "rigidSolver.t[9].tz" "rigidBody_tz9.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_rx9.s";
+connectAttr "rigidSolver.r[9].rx" "rigidBody_rx9.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_ry9.s";
+connectAttr "rigidSolver.r[9].ry" "rigidBody_ry9.i[0]";
+connectAttr "rigidBody10.chc" "rigidBody_rz9.s";
+connectAttr "rigidSolver.r[9].rz" "rigidBody_rz9.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_tx10.s";
+connectAttr "rigidSolver.t[10].tx" "rigidBody_tx10.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_ty10.s";
+connectAttr "rigidSolver.t[10].ty" "rigidBody_ty10.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_tz10.s";
+connectAttr "rigidSolver.t[10].tz" "rigidBody_tz10.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_rx10.s";
+connectAttr "rigidSolver.r[10].rx" "rigidBody_rx10.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_ry10.s";
+connectAttr "rigidSolver.r[10].ry" "rigidBody_ry10.i[0]";
+connectAttr "rigidBody11.chc" "rigidBody_rz10.s";
+connectAttr "rigidSolver.r[10].rz" "rigidBody_rz10.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_tx11.s";
+connectAttr "rigidSolver.t[11].tx" "rigidBody_tx11.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_ty11.s";
+connectAttr "rigidSolver.t[11].ty" "rigidBody_ty11.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_tz11.s";
+connectAttr "rigidSolver.t[11].tz" "rigidBody_tz11.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_rx11.s";
+connectAttr "rigidSolver.r[11].rx" "rigidBody_rx11.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_ry11.s";
+connectAttr "rigidSolver.r[11].ry" "rigidBody_ry11.i[0]";
+connectAttr "rigidBody12.chc" "rigidBody_rz11.s";
+connectAttr "rigidSolver.r[11].rz" "rigidBody_rz11.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_tx12.s";
+connectAttr "rigidSolver.t[12].tx" "rigidBody_tx12.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_ty12.s";
+connectAttr "rigidSolver.t[12].ty" "rigidBody_ty12.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_tz12.s";
+connectAttr "rigidSolver.t[12].tz" "rigidBody_tz12.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_rx12.s";
+connectAttr "rigidSolver.r[12].rx" "rigidBody_rx12.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_ry12.s";
+connectAttr "rigidSolver.r[12].ry" "rigidBody_ry12.i[0]";
+connectAttr "rigidBody13.chc" "rigidBody_rz12.s";
+connectAttr "rigidSolver.r[12].rz" "rigidBody_rz12.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_tx13.s";
+connectAttr "rigidSolver.t[13].tx" "rigidBody_tx13.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_ty13.s";
+connectAttr "rigidSolver.t[13].ty" "rigidBody_ty13.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_tz13.s";
+connectAttr "rigidSolver.t[13].tz" "rigidBody_tz13.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_rx13.s";
+connectAttr "rigidSolver.r[13].rx" "rigidBody_rx13.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_ry13.s";
+connectAttr "rigidSolver.r[13].ry" "rigidBody_ry13.i[0]";
+connectAttr "rigidBody14.chc" "rigidBody_rz13.s";
+connectAttr "rigidSolver.r[13].rz" "rigidBody_rz13.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_tx14.s";
+connectAttr "rigidSolver.t[14].tx" "rigidBody_tx14.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_ty14.s";
+connectAttr "rigidSolver.t[14].ty" "rigidBody_ty14.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_tz14.s";
+connectAttr "rigidSolver.t[14].tz" "rigidBody_tz14.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_rx14.s";
+connectAttr "rigidSolver.r[14].rx" "rigidBody_rx14.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_ry14.s";
+connectAttr "rigidSolver.r[14].ry" "rigidBody_ry14.i[0]";
+connectAttr "rigidBody15.chc" "rigidBody_rz14.s";
+connectAttr "rigidSolver.r[14].rz" "rigidBody_rz14.i[0]";
+connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
+connectAttr "file1.oc" "PxrDisney1.baseColor";
+connectAttr "PxrDisney1.oc" "PxrDisney1SG.ss";
+connectAttr "PxrDisney1SG.msg" "materialInfo1.sg";
+connectAttr "PxrDisney1.msg" "materialInfo1.m";
+connectAttr "PxrDisney1.msg" "materialInfo1.t" -na;
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "PxrDisney2SG.msg" "materialInfo2.sg";
+connectAttr "PxrDisney3SG.msg" "materialInfo3.sg";
+connectAttr "place2dTexture2.c" "file2.c";
+connectAttr "place2dTexture2.tf" "file2.tf";
+connectAttr "place2dTexture2.rf" "file2.rf";
+connectAttr "place2dTexture2.mu" "file2.mu";
+connectAttr "place2dTexture2.mv" "file2.mv";
+connectAttr "place2dTexture2.s" "file2.s";
+connectAttr "place2dTexture2.wu" "file2.wu";
+connectAttr "place2dTexture2.wv" "file2.wv";
+connectAttr "place2dTexture2.re" "file2.re";
+connectAttr "place2dTexture2.of" "file2.of";
+connectAttr "place2dTexture2.r" "file2.ro";
+connectAttr "place2dTexture2.n" "file2.n";
+connectAttr "place2dTexture2.vt1" "file2.vt1";
+connectAttr "place2dTexture2.vt2" "file2.vt2";
+connectAttr "place2dTexture2.vt3" "file2.vt3";
+connectAttr "place2dTexture2.vc1" "file2.vc1";
+connectAttr "place2dTexture2.o" "file2.uv";
+connectAttr "place2dTexture2.ofs" "file2.fs";
+connectAttr "place2dTexture3.c" "file3.c";
+connectAttr "place2dTexture3.tf" "file3.tf";
+connectAttr "place2dTexture3.rf" "file3.rf";
+connectAttr "place2dTexture3.mu" "file3.mu";
+connectAttr "place2dTexture3.mv" "file3.mv";
+connectAttr "place2dTexture3.s" "file3.s";
+connectAttr "place2dTexture3.wu" "file3.wu";
+connectAttr "place2dTexture3.wv" "file3.wv";
+connectAttr "place2dTexture3.re" "file3.re";
+connectAttr "place2dTexture3.of" "file3.of";
+connectAttr "place2dTexture3.r" "file3.ro";
+connectAttr "place2dTexture3.n" "file3.n";
+connectAttr "place2dTexture3.vt1" "file3.vt1";
+connectAttr "place2dTexture3.vt2" "file3.vt2";
+connectAttr "place2dTexture3.vt3" "file3.vt3";
+connectAttr "place2dTexture3.vc1" "file3.vc1";
+connectAttr "place2dTexture3.o" "file3.uv";
+connectAttr "place2dTexture3.ofs" "file3.fs";
+connectAttr "polyNormal2.out" "polyAutoProj1.ip";
+connectAttr "polyNormal1.out" "polyAutoProj2.ip";
+connectAttr "polyNormal3.out" "polyAutoProj3.ip";
+connectAttr "polyNormal4.out" "polyAutoProj4.ip";
+connectAttr "polyNormal5.out" "polyAutoProj5.ip";
+connectAttr "polyNormal6.out" "polyAutoProj6.ip";
+connectAttr "polyNormal7.out" "polyAutoProj7.ip";
+connectAttr "PxrDisney1SG.pa" ":renderPartition.st" -na;
+connectAttr "PxrDisney2SG.pa" ":renderPartition.st" -na;
+connectAttr "PxrDisney3SG.pa" ":renderPartition.st" -na;
+connectAttr "PxrDisney1.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "BANDITS_002:groupId16.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId17.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId18.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId19.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId20.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId21.msg" ":initialShadingGroup.gn" -na;
-connectAttr "BANDITS_002:groupId22.msg" ":initialShadingGroup.gn" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"BANDITS_002RN\" \"\" \"assets/texts/titles/BANDITS_002.ma\" 1243742523 \"/Users/AkhilBatra/Documents/schoolStuff/junior/CNM190/animation/work/Bandits/maya/assets/texts/titles/BANDITS_002.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"BANDITS_002RN\" \"\" \"assets/texts/titles/BANDITS_002.ma\" 3806015952 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/texts/titles/BANDITS_002.ma\" \"FileRef\"\n1\n\"TitleBANDITS_004RN\" \"\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya//assets/texts/titles/TitleBANDITS_004.ma\" 4044685278 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/assets/texts/titles/TitleBANDITS_004.ma\" \"FileRef\"\n2\n\"file1\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" 3651639773 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" \"sourceImages\"\n3\n\"file2\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" 3651639773 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" \"sourceImages\"\n4\n\"file3\" \"fileTextureName\" \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" 3651639773 \"/Users/AkhilBatra/Documents/schoolStuff/junior/cnm190/animation/Bandits/maya/sourceimages/TitleBandits001.png\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of bandits_title_overlay.ma
